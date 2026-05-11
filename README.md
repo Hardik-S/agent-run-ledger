@@ -54,4 +54,6 @@ Keeping the vocabulary closed prevents vague failure notes like "GitHub broken" 
 
 ## Deployment
 
-Expected deployment target: Vercel production project `agent-run-ledger`.
+Vercel production URL: https://agent-run-ledger.vercel.app
+
+Deployment project: `agent-run-ledger` under the currently authenticated Vercel scope. The first production deployment used `npx vercel@latest --prod --yes --name agent-run-ledger` because the global Vercel CLI was not installed.
