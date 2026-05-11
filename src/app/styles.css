@@ -8,6 +8,7 @@
   --green: #147a43;
   --amber: #9a5b00;
   --blue: #2459a8;
+  --teal: #0f766e;
 }
 
 * {
@@ -85,9 +86,39 @@ h2 {
   font-size: 1.8rem;
 }
 
+.trustStrip {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin: 22px 0 0;
+}
+
+.trustStrip div {
+  border-top: 3px solid var(--blue);
+  background: var(--panel);
+  padding: 14px;
+}
+
+.trustStrip span,
+.packetGrid span,
+.blockers small,
+.packets span {
+  display: block;
+  color: var(--muted);
+  font-size: 0.78rem;
+}
+
+.trustStrip strong {
+  display: block;
+  margin-top: 8px;
+  color: #272b31;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
 .metrics {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(6, minmax(0, 1fr));
   gap: 12px;
   margin: 22px 0;
 }
@@ -150,6 +181,27 @@ h2 {
   line-height: 1.45;
 }
 
+.packetGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin: 10px 0;
+  background: #f1f5f9;
+  padding: 10px 12px;
+}
+
+.packetGrid ul {
+  margin: 6px 0 0;
+  padding-left: 16px;
+  color: #30343a;
+  line-height: 1.45;
+}
+
+.handoff {
+  border-top: 1px solid var(--line);
+  padding-top: 8px;
+}
+
 code {
   color: var(--blue);
   font-size: 0.82rem;
@@ -164,6 +216,10 @@ code {
   color: var(--amber);
 }
 
+.info {
+  color: var(--teal);
+}
+
 .blockers {
   display: grid;
   gap: 12px;
@@ -173,6 +229,23 @@ code {
 .blockers div {
   border-bottom: 1px solid var(--line);
   padding-bottom: 10px;
+}
+
+.packets {
+  display: grid;
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.packets div {
+  border-left: 3px solid var(--teal);
+  padding-left: 12px;
+}
+
+.packets p {
+  margin-top: 6px;
+  color: #30343a;
+  line-height: 1.4;
 }
 
 .actions {
@@ -190,7 +263,9 @@ code {
 
   .hero,
   .grid,
-  .metrics {
+  .metrics,
+  .trustStrip,
+  .packetGrid {
     grid-template-columns: 1fr;
   }
 }
